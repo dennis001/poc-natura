@@ -1,0 +1,50 @@
+flash "* text:'Perfumaria'"
+flash 'android.support.v7.widget.AppCompatTextView'
+flash "* id:'app_bar_search'"
+exit
+start_test_server_in_background
+start_test_server_in_background
+reinstall_apps
+start_test_server_in_background
+flash "* id:'icLogo'"
+query"*"
+q
+flash "* id:'relativeLayout5'"
+clear
+exit
+start_test_server_in_background
+query"*"
+flash "* id:'tabLayout'"
+exit
+start_test_server_in_background
+exit
+start_test_server_in_background
+query"*"
+flash "* id:'statusBarBackground'"
+flash "* id:'statusBarBackground'"
+query"*"
+flash "* id:'fab_item_menu'"
+touch "* id:'fab_item_menu'"
+touch "* id:'fab_item_menu'"
+flash "* id:'fab_item_menu'"
+query"*"
+ids
+text
+query"*"
+flash "* id:'txBrand'"
+flash "* text:'txBrand'"
+flash "* text:'Tododia'"
+touch "* text:'Tododia'"
+query"*"
+flash "* id:'ic_share'"
+touch "* id:'ic_share'"
+query"*"
+flash "* id:'btBuyFloat'"
+touch "* id:'btBuyFloat'"
+query"*"
+flash "* id:'ivProduct'"
+flash "* id:'slider'"
+slider "* id:'slider'"
+slider "* id:'slider'"
+touch "* id:'slider'"
+exit
