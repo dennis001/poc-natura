@@ -8,6 +8,7 @@ class Cadastro < Appium::Driver
         @btn_me_cadastrar = "btQueroCadastrar"
         @nome = "edNomeCompleto"
         @nome01 = Faker::Simpsons.character 
+		@nome02 = Faker::GameOfThrones.houses
         @cpf = "edCPF"
         @cpf_num = Faker::CPF.numeric
         @email = "edEmail"
@@ -23,6 +24,7 @@ class Cadastro < Appium::Driver
         @telefone = "edTelefone"
         @telefone_num = Faker::Number.number(11)
         @term_uso = "ckAcceptTerms"
+		@concordar_btn = "keep"
         @btn_term_ok = "btOk"
         @btn_entrar = "btEntrar"
         @first_name = "txFirstName"
@@ -31,17 +33,17 @@ class Cadastro < Appium::Driver
      # ================================ METHODS ======================================
 
      def menu
-        find_element(class: @menu_button).click
-        id(@login_cadastro).click
+        find_element(class: @menu_button).click   
      end
 
      def cadastrar
+		id(@login_cadastro).click
         id(@btn_me_cadastrar).click
      end
 
      def dados_cliente 
         id(@nome).click
-        id(@nome).send_key @nome01
+        id(@nome).send_key @nome01, @nome02
         hide_keyboard
 
         id(@cpf).click 
@@ -77,11 +79,13 @@ class Cadastro < Appium::Driver
      end
      
      def termo 
-        id(@btn_term_ok).click
+	  # id(@btn_term_ok).click
+		id(@concordar_btn).click
         id(@btn_entrar).click
      end
 
      def verificar_cadastro 
+	 find_element(class: @menu_button).click
         wait_for { driver.find_element(:id, "txFirstName").displayed? }
      end
     

@@ -6,14 +6,14 @@ Funcionalidade:
  Quero me logar no aplicativo
  Para efetuar compras no mesmo
 
-    
+    @login_sucesso
     Cenario: Primeiro acesso ao aplicativo (login com sucesso)
         Dado que estou na home do aplicativo
         Quando toco no botão de login /cadastro
         E coloco meus dados para logar
         Então sou redirecionado para a home page
 
-    @wip
+    @login_insucesso
     Cenario: Login de insucesso
         Dado que estou na home do aplicativo
         Quando toco no botão de login /cadastro

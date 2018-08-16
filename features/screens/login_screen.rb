@@ -2,13 +2,16 @@ class Login < Appium::Driver
 
  # ================================= SCREEN ======================================    
     def initialize
+	    @menu_button = "android.widget.ImageButton"
         @email = "edEmail"
         @senha = "edPassword"
         @btn_entrar = "btEntrar"
+		@login_cadastro = "imageView4"
     end
  # ================================ METHODS ======================================
 
  def email
+	id(@login_cadastro).click
     id(@email).click
     id(@email).send_key "janilsom.tompsom@test.com"
     hide_keyboard
@@ -25,6 +28,7 @@ class Login < Appium::Driver
  end
 
  def verificar_cadastro 
+    find_element(class: @menu_button).click   
     wait_for { driver.find_element(:id, "txFirstName").displayed? }
  end
 

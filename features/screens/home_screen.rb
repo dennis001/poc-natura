@@ -24,7 +24,7 @@ class Home < Appium::Driver
       end
 
       def log_inicio
-        id(@logHome)
+	    id(@logHome)
       end
 
       def descricao

@@ -1,12 +1,3 @@
-flash "* text:'Perfumaria'"
-flash 'android.support.v7.widget.AppCompatTextView'
-flash "* id:'app_bar_search'"
-exit
-start_test_server_in_background
-start_test_server_in_background
-reinstall_apps
-start_test_server_in_background
-flash "* id:'icLogo'"
 query"*"
 q
 flash "* id:'relativeLayout5'"
@@ -47,4 +38,13 @@ flash "* id:'slider'"
 slider "* id:'slider'"
 slider "* id:'slider'"
 touch "* id:'slider'"
+exit
+reinstall_apps
+exit
+uninstall_apps
+exit
+exit
+reinstall_apps
+exit
+reinstall_apps
 exit
