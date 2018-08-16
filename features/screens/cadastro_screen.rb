@@ -8,7 +8,7 @@ class Cadastro < Appium::Driver
         @btn_me_cadastrar = "btQueroCadastrar"
         @nome = "edNomeCompleto"
         @nome01 = Faker::Simpsons.character 
-		@nome02 = Faker::GameOfThrones.houses
+		@nome02 = Faker::GameOfThrones.house
         @cpf = "edCPF"
         @cpf_num = Faker::CPF.numeric
         @email = "edEmail"
